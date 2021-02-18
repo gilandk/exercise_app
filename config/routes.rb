@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  get 'items/dashboard'
   get 'items/list'
   get 'items/add'
   get 'items/edit'
@@ -9,6 +11,6 @@ Rails.application.routes.draw do
   get 'users/view'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  root 'items#list'
+  root 'items#dashboard'
 
 end
