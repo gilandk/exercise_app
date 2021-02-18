@@ -1,14 +1,19 @@
 class ItemsController < ApplicationController
+  
+
   def list
-    @Items = Item.all
+    @items = Item.all
   end
 
   def add
+    @item = Item.add
   end
 
   def edit
   end
 
   def view
+    @item = Item.find(params[:id])
   end
+
 end

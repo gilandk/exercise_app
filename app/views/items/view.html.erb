@@ -1,2 +1,10 @@
 <h1>Items#view</h1>
-<p>Find me in app/views/items/view.html.erb</p>
+<br/>
+<h2><%= @item.name %></h2>
+<p>
+Quantity: <%= @item.quantity %>
+<br/>
+Price: <%= number_to_currency @item.price %>
+</p>
+<br/>
+<%= link_to 'Back', items_path, class:'btn btn-secondary' %>

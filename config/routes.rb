@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   
-  get 'items/dashboard'
-  get 'items/list'
-  get 'items/add'
+  get 'items/', to: 'items#list', as: 'items'
+  get 'items/:id', to: 'items#view', as: 'item', id: /\d+/
+  get 'items/add', to: 'items#add', as: 'add_item'
   get 'items/edit'
-  get 'items/view'
+  
+  post 'items', to: 'items#create'
+
   get 'users/list'
   get 'users/add'
   get 'users/edit'

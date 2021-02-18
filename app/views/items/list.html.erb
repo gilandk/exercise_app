@@ -1,20 +1,29 @@
-<h1>Items#list</h1>
+<%= link_to 'Add Item', add_item_path, class:'btn btn-success' %>
+ <br/>
+ <br/>
+ 
+ 
 
 <table class="table">
   <thead class="table-dark">
+
+ 
+  
      <tr>
         <th>Item</th>
         <th>Quantity</th>
         <th>Price</th>
-        <th>Action</th>
+        <th class="text-center">Action</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-        <td>Apple</td>
-        <td>10</td>
-        <td>20</td>
-        <td>VIEW - EDIT - DELETE</td>
+    <% @items.each do |item| %>
+       <td><%= item.name %></td>
+       <td> <%= item.quantity %></td>
+       <td> <%= item.price %></td>
+       <td class="text-center"><%= link_to 'View', item_path(item.id), class:'btn btn-secondary' %> - EDIT - DELETE</td>
     </tr>
+      <% end %>
   </tbody>
 </table>

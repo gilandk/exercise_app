@@ -1,2 +1,21 @@
-<h1>Users#list</h1>
-<p>Find me in app/views/users/list.html.erb</p>
+ <%= link_to 'Add User', users_add_path, class:'btn btn-success' %>
+ <br/>
+ <br/>
+
+
+<table class="table">
+  <thead class="table-dark">
+     <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th class="text-center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>Aron</td>
+        <td>asd@gmail.com</td>
+         <td class="text-center">SHOW - EDIT - DELETE</td>
+    </tr>
+  </tbody>
+</table>
