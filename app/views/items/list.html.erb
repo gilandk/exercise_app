@@ -10,6 +10,7 @@
         <th>Item</th>
         <th>Quantity</th>
         <th>Price</th>
+         <th>User</th>
         <th class="text-center">Action</th>
     </tr>
   </thead>
@@ -19,6 +20,7 @@
        <td><%= item.name %></td>
        <td> <%= item.quantity %></td>
        <td> <%= item.price %></td>
+       <td> <%= item.userid %></td>
        <td class="text-center">
        <%= link_to 'View', item_path(item.id), class:'btn btn-secondary' %>
        <%= link_to 'Edit', edit_item_path(item.id), class:'btn btn-warning' %>
