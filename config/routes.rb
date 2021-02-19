@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   
   get 'items/', to: 'items#list', as: 'items'
-  get 'items/:id', to: 'items#view', as: 'item', id: /\d+/
-  get 'items/add', to: 'items#add', as: 'add_item'
-  get 'items/:id/edit', to: 'items#edit', as: 'edit_item'
-  patch 'items/:id', to: 'items#update'
+  get 'item/:id', to: 'items#view', as: 'item', id: /\d+/
+  get 'item/add', to: 'items#add', as: 'add_item'
+  get 'item/:id/edit', to: 'items#edit', as: 'edit_item'
+  patch 'item/:id', to: 'items#update'
   
   post 'items', to: 'items#create'
 

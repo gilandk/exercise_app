@@ -6,9 +6,6 @@
 
 <table class="table">
   <thead class="table-dark">
-
- 
-  
      <tr>
         <th>Item</th>
         <th>Quantity</th>
@@ -22,7 +19,7 @@
        <td><%= item.name %></td>
        <td> <%= item.quantity %></td>
        <td> <%= item.price %></td>
-       <td class="text-center"><%= link_to 'View', item_path(item.id), class:'btn btn-secondary' %> - EDIT - DELETE</td>
+       <td class="text-center"><%= link_to 'View', item_path(item.id), class:'btn btn-secondary' %> <%= link_to 'Edit', edit_item_path(item.id), class:'btn btn-warning' %> - DELETE</td>
     </tr>
       <% end %>
   </tbody>
