@@ -2,22 +2,22 @@ require "test_helper"
 
 class ItemsControllerTest < ActionDispatch::IntegrationTest
   test "should get list" do
-    get items_list_url
+    get "/items/"
     assert_response :success
   end
 
   test "should get add" do
-    get items_add_url
+    get "/items/add/"
     assert_response :success
   end
 
   test "should get edit" do
-    get items_edit_url
+    get "/items/:id/edit/"
     assert_response :success
   end
 
   test "should get view" do
-    get items_view_url
+    get "/items/:id/"
     assert_response :success
   end
 end

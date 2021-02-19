@@ -1,4 +1,4 @@
- <%= link_to 'Add User', users_add_path, class:'btn btn-success' %>
+ <%= link_to 'Add User', add_user_path, class:'btn btn-success' %>
  <br/>
  <br/>
 
@@ -12,10 +12,16 @@
     </tr>
   </thead>
   <tbody>
+  <% @users.each do |user| %>
     <tr>
-        <td>Aron</td>
-        <td>asd@gmail.com</td>
-         <td class="text-center">SHOW - EDIT - DELETE</td>
+       <td><%= user.name %></td>
+        <td><%= user.email %></td>
+       <td class="text-center">
+       <%= link_to 'View', user_path(user.id), class:'btn btn-secondary' %>
+       <%= link_to 'Edit', edit_user_path(user.id), class:'btn btn-warning' %>
+       <%= link_to 'Delete', delete_user_path(user.id), method: :delete, confirm: 'Delete?', class:'btn btn-danger' %>
+       </td>
     </tr>
+      <% end %>
   </tbody>
 </table>
