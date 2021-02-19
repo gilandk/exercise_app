@@ -19,7 +19,11 @@
        <td><%= item.name %></td>
        <td> <%= item.quantity %></td>
        <td> <%= item.price %></td>
-       <td class="text-center"><%= link_to 'View', item_path(item.id), class:'btn btn-secondary' %> <%= link_to 'Edit', edit_item_path(item.id), class:'btn btn-warning' %> - DELETE</td>
+       <td class="text-center">
+       <%= link_to 'View', item_path(item.id), class:'btn btn-secondary' %>
+       <%= link_to 'Edit', edit_item_path(item.id), class:'btn btn-warning' %>
+       <%= link_to 'Delete', delete_item_path(item.id), method: :delete, confirm: 'Delete?', class:'btn btn-danger' %>
+       </td>
     </tr>
       <% end %>
   </tbody>
