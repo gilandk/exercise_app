@@ -1,3 +1,5 @@
+ <h2>Users List</h2>
+<br/>
  <%= link_to 'Add User', add_user_path, class:'btn btn-success' %>
  <br/>
  <br/>
@@ -21,7 +23,7 @@
        <td class="text-center">
        <%= link_to 'View', user_path(user.id), class:'btn btn-secondary' %>
        <%= link_to 'Edit', edit_user_path(user.id), class:'btn btn-warning' %>
-       <%= link_to 'Delete', delete_user_path(user.id), method: :delete, confirm: 'Delete?', class:'btn btn-danger' %>
+       <%= link_to 'Delete', delete_user_path(user.id), method: :delete, class:'btn btn-danger', data: { confirm: "Are you sure?" } %>
        </td>
     </tr>
       <% end %>

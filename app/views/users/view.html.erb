@@ -1,4 +1,4 @@
-<h1>Users#view</h1>
+<h1>View User</h1>
 <br/>
 <h2><%= @user.name %></h2>
 <p>
@@ -6,4 +6,5 @@
 <br/>
 </p>
 <br/>
+<%= link_to 'Edit', edit_user_path(@user.id), class:'btn btn-warning' %>
 <%= link_to 'Back', users_path, class:'btn btn-secondary' %>

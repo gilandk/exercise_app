@@ -1,8 +1,8 @@
+<h2>Items List</h2>
+<br/>
 <%= link_to 'Add Item', add_item_path, class:'btn btn-success' %>
  <br/>
  <br/>
- 
- 
 
 <table class="table">
   <thead class="table-dark">
@@ -24,7 +24,7 @@
        <td class="text-center">
        <%= link_to 'View', item_path(item.id), class:'btn btn-secondary' %>
        <%= link_to 'Edit', edit_item_path(item.id), class:'btn btn-warning' %>
-       <%= link_to 'Delete', delete_item_path(item.id), method: :delete, confirm: 'Delete?', class:'btn btn-danger' %>
+       <%= link_to 'Delete', delete_item_path(item.id), method: :delete, data: { confirm: "Are you sure?" }, class:'btn btn-danger' %>
        </td>
     </tr>
       <% end %>
