@@ -242,7 +242,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bootsnap
+  bootsnap (~> 1.7.2)
   byebug
   capybara (>= 3.26)
   guard
